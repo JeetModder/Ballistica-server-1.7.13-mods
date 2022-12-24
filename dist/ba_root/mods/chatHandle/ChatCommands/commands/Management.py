@@ -6,7 +6,7 @@ import ba, _ba, time, setting
 import ba.internal
 import _thread
 from tools import playlist
-Commands = ['showid','hideid','lm', 'gp', 'party', 'quit', 'kickvote','maxplayers','playlist','ban','kick', 'remove', 'end', 'quit', 'mute', 'unmute', 'slowmo', 'nv', 'dv', 'pause', 'cameramode', 'createrole', 'addrole', 'removerole', 'addcommand', 'addcmd', 'removecommand','getroles', 'removecmd', 'changetag','customtag','customeffect','add', 'spectators', 'lobbytime']
+Commands = ['showid','hideid','lm', 'gp', 'party', 'quit', 'kickvote','maxplayers','playlist','ban','kick', 'remove', 'end', 'quit', 'mute', 'unmute', 'slowmo', 'nv', 'dv', 'pause', 'cameramode', 'createrole', 'addrole', 'removerole', 'addcommand', 'addcmd', 'removecommand','getroles', 'removecmd', 'changetag','customtag','customeffect','add', 'spectators', 'lobbytime', 'mute10']
 CommandAliases = ['max','rm', 'next', 'restart', 'mutechat', 'unmutechat', 'sm', 'slow', 'night', 'day', 'pausegame', 'camera_mode', 'rotate_camera','effect']
 
 
@@ -111,6 +111,9 @@ def ExcelCommand(command, arguments, clientid, accountid):
 
     elif command == 'lobbytime':
         change_lobby_check_time(arguments)
+
+    elif command == 'mute10':
+        ten_minutes_mute(arguments)
 
 
 def hide_player_spec():
@@ -437,7 +440,7 @@ def set_custom_effect(arguments):
 
 
 
-all_commands = ["changetag","createrole", "addrole", "removerole", "addcommand", "addcmd","removecommand","removecmd","kick","remove","rm","end","next","quit","restart","mute","mutechat","unmute","unmutechat","sm","slow","slowmo","nv","night","dv","day","pause","pausegame","cameraMode","camera_mode","rotate_camera","kill","die","heal","heath","curse","cur","sleep","sp","superpunch","gloves","punch","shield","protect","freeze","ice","unfreeze","thaw","gm","godmode","fly","inv","invisible","hl","headless","creepy","creep","celebrate","celeb","spaz"]
+all_commands = ["changetag","createrole", "addrole", "removerole", "addcommand", "addcmd","removecommand","removecmd","kick","remove","rm","end","next","quit","restart","mute","mutechat","unmute","unmutechat","sm","slow","slowmo","nv","night","dv","day","pause","pausegame","cameraMode","camera_mode","rotate_camera","kill","die","heal","heath","curse","cur","sleep","sp","superpunch","gloves","punch","shield","protect","freeze","ice","unfreeze","thaw","gm","godmode","fly","inv","invisible","hl","headless","creepy","creep","celebrate","celeb","spaz", "mute10", "3dfly", "flo", "egg", "mine", "box", "ch", "character", "rst", "reset", "disco", "dis"]
 
 
 
@@ -519,3 +522,49 @@ def change_lobby_check_time(arguments):
     settings["white_list"]["lobbychecktime"] = argument
     setting.commit(settings)
     ba.internal.chatmessage(f"lobby check time is {argument} now")
+
+
+def ten_minutes_mute(arguments):
+    if len(arguments) == 0:
+        serverdata.muted = True
+        # ba.screenmessage("Server muted")
+        # _ba.chatmessage("server muted")
+        ba.timer(600, ba.Call(un_mute, arguments))
+    try:
+        cl_id = int(arguments[0])
+        ac_id = ""
+        for ros in _ba.get_game_roster():
+            if ros["client_id"] == cl_id:
+                _thread.start_new_thread(pdata.mute, (ros['account_id'],))
+                ba.screenmessage("Worked")
+                _ba.chatmessage("Player muted for 5 mins")
+                ba.timer(300, ba.Call(un_mute, arguments))
+                _ba.chatmessage("Awake")
+                ac_id = ros['account_id']
+        if ac_id in serverdata.clients:
+            serverdata.clients[ac_id]["isMuted"] = True
+            ba.screenmessage("Player muted for 5 mins")
+            ba.timer(300, ba.Call(un_mute, arguments))
+    except Exception as e:
+        print(e)
+
+
+def ten_minutes_unmute(arguments):
+    if len(arguments) == 0:
+        serverdata.muted = False
+        ba.screenmessage("Server unmuted")
+    try:
+        cl_id = int(arguments[0])
+        ac_id = ""
+        for ros in _ba.get_game_roster():
+            if ros["client_id"] == cl_id:
+                pdata.unmute(ros['account_id'])
+                ac_id = ros['account_id']
+                _ba.chatmessage("Unmuted now")
+        if ac_id in serverdata.clients:
+            serverdata.clients[ac_id]["isMuted"] = False
+            ba.screenmessage("Player unmuted")
+        return
+    except Exception as e:
+        print(e)
+
