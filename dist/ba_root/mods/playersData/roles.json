@@ -1,6 +1,6 @@
 {
     "owner": {
-        "tag": "\\cowner\\c",
+        "tag": "",
         "tagcolor": [
             1,
             0.6,
@@ -10,36 +10,148 @@
             "ALL"
         ],
         "ids": [
-            "pb-IF48VWkBFQ",
-            "pb-JiNJARBaXEFBVF9HFkNXXF1EF0ZaRlZE",
-            "pb-IF4TVWwZUQ==",
-            "pb-IF4SVW9dEg==",
-            "pb-IF5XUm9eAg=="
+            "pb-IF4UUmVYFA==",
+            "pb-IF42VXQbUw==",
+            "pb-IF4qJ0MA",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "pb-JiNJARBbXENAX1xEF0NZV1RFEEBbRFJB",
+            "pb-IF4lVU9bEA==",
+            "pb-IF4nVUk5AQ=="
         ]
     },
-    "admin": {
-        "tag": "\ue043admin\ue043",
+    "vip+": {
+        "tag": "",
         "tagcolor": [
-            1,
-            1,
-            1
+            0.8,
+            0.05,
+            0.05
         ],
         "commands": [
-            "createrole"
+            "quit",
+            "playlist",
+            "ban",
+            "kick",
+            "remove",
+            "rm",
+            "end",
+            "mute",
+            "unmute",
+            "slowmo",
+            "sm",
+            "slow",
+            "night",
+            "nv",
+            "dv",
+            "day",
+            "customtag",
+            "customeffect",
+            "effect",
+            "mute10",
+            "kill",
+            "die",
+            "heal",
+            "heath",
+            "curse",
+            "cur",
+            "sleep",
+            "superpunch",
+            "sp",
+            "gloves",
+            "punch",
+            "shield",
+            "protect",
+            "freeze",
+            "ice",
+            "unfreeze",
+            "thaw",
+            "godmode",
+            "gm",
+            "fly",
+            "invisible",
+            "inv",
+            "headless",
+            "hl",
+            "creepy",
+            "creep",
+            "celebrate",
+            "celeb",
+            "speed",
+            "floater",
+            "flo",
+            "3dfly",
+            "hug",
+            "box",
+            "mine",
+            "egg",
+            "character",
+            "ch"
         ],
         "ids": [
-            "pb-IF4TVWwZUQ=="
+            "pb-IF4nVUk5AQ==",
+            "pb-JiNJARBcUUZHXVhBFkVVUF1FFUBcQldD"
         ]
     },
     "vip": {
-        "tag": "vip",
+        "tag": "",
+        "tagcolor": [
+            0.8,
+            0.4,
+            0.2
+        ],
+        "commands": [
+            "night",
+            "nv",
+            "day",
+            "dv",
+            "fly",
+            "invisible",
+            "inv",
+            "headless",
+            "hl",
+            "celeb",
+            "celebrate",
+            "sm",
+            "slowmo",
+            "slow",
+            "box",
+            "kick",
+            "remove",
+            "rm",
+            "",
+            "",
+            "end"
+        ],
+        "ids": [
+            "pb-IF4QUnpeAA==",
+            "",
+            "",
+            "pb-IF4nVUk5AQ=="
+        ]
+    },
+    "bvip": {
+        "tag": "",
         "tagcolor": [
             1,
-            1,
-            1
+            0.8,
+            0
         ],
-        "commands": [],
-        "ids": []
+        "commands": [
+            "remove",
+            "rm",
+            "end",
+            "sm"
+        ],
+        "ids": [
+            "pb-IF4QHGcj",
+            ""
+        ]
     },
     "smoothy": {
         "tag": "smoothy",
@@ -70,8 +182,11 @@
         ],
         "commands": [],
         "ids": [
-            "pb-IF4VAk4a",
-            "pb-IF4RU2ECAg=="
+            "pb-IF4QUnpeAA==",
+            "pb-IF4HU04tIQ==",
+            "pb-IF4nVUk5AQ==",
+            "pb-IF4OVWENBg==",
+            "pb-IF4qJ0MA"
         ]
     },
     "bypass-warn": {
@@ -88,6 +203,23 @@
             "pb-IF4iVUc5Cg==",
             "pb-IF4vNnMJ",
             "pb-IF4TVWwZUQ=="
+        ]
+    },
+    "kick": {
+        "tag": "",
+        "tagcolor": [
+            1,
+            1,
+            1
+        ],
+        "commands": [
+            "kick"
+        ],
+        "ids": [
+            "",
+            "",
+            "",
+            ""
         ]
     }
 }

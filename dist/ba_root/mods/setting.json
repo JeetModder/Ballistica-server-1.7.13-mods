@@ -1,53 +1,61 @@
 {
     "whitelist": false,
     "useV2Account": false,
-    "Anti-IdRevealer": false,
+    "Anti-IdRevealer": true,
     "ChatCommands": {
   	  "BrodcastCommand": true
     },
     "textonmap": {
-        "top watermark": "Welcome to server \nip 192.168.0.1",
-        "bottom left watermark": "Owner : <owner-name> \nEditor : <bablu>\nScripts : BCS1.7.13",
+        "top watermark": "Discord : https://dsc.gg/jeet",
+        "bottom left watermark": "\n\nOwner : \ue043Jeet\ue043\nDiscord : https://dsc.gg/jeet",
         "center highlights":{
             "color":[1,0,0],
             "randomColor":true,
             "msg":[
-                "type end to start end vote",
-                "start msg with prefix .(dot) to send in game popup msg",
-                "start msg with prefix ,(comma) to send msg to teammates",
-                "BombSquad Community Server - BCS"
+                "\ue048Join discord now and get free custom tags\ue048",
+                "Join our DISCORD family through - https://dsc.gg/jeet",
+                "\ue047Or click on STATS and join DISCORD\ue047",
+                "\ue047Join DISCORD and find someone to play with\ue047",
+                "\ue048Top 3 will get one month VIP\ue048",
+                "Check /me, /ping",
+                "Ranks are reset at the end of every month",
+                "ABUSE, SPAM & BETRAY = BAN",
+                "Send your complains or suggestions in discord"
                 ]
         }
     },
     "statsResetAfterDays":31,
     "leaderboard":{
         "enable":true,
-        "barsBehindName":true
+        "barsBehindName":false
     },
     "autoNightMode":{
-        "enable":true,
+        "enable":false,
         "startTime":"18:30",
         "endTime":"06:00",
-        "fireflies":true,
+        "fireflies":false,
         "fireflies_random_color":false
     },
-    "colorfullMap":true,
+    "colorfullMap":false,
     "playlists":{
-        "default":12345,
-        "team":12345,
-        "ffa":22222,
-        "elim":34343,
-        "death":23432
+        "default":380795,
+        "def2":395302,
+        "fun":377269,
+        "elim":377268,
+        "pro":379052,
+        "smash":383419,
+        "death":383420,
+        "solo":395299
     },
     "coopModeWithLessPlayers":{
         "enable":false,
         "minPlayerToExitCoop":0
     },
     "mikirogQuickTurn":{
-        "enable":true
+        "enable":false
     },
     "colorful_explosions":{
-        "enable":true
+        "enable":false
     },
     "ballistica_web": {
         "enable":false
@@ -61,28 +69,28 @@
     "StumbledScoreScreen":true,
     "elPatronPowerups":{
         "enable":true,
-        "settings":{"Powers Gravity": true,
+        "settings":{"Powers Gravity": false,
             "Tank Shield PTG": 96,
             "Healing Damage PTG": 72,
             "Powerup Style": "Auto",
             "Powerup Scale": 1.0,
-            "Powerup Name": true,
-            "Powerup With Shield": true,
+            "Powerup Name": false,
+            "Powerup With Shield": false,
             "Powerup Time": false},
-        "Quantity":{ "Shield": 2,
-             "Punch": 3, "Mine Bombs": 2,
+        "Quantity":{ "Shield": 0,
+             "Punch": 0, "Mine Bombs": 2,
             "Impact Bombs": 3, "Ice Bombs": 3, "Triple": 3,
             "Sticky Bombs": 3, "Curse": 1, "Health": 1,
-            "Speed": 2, "Healing Damage": 1, "Goodbye": 2,
-            "Ice Man": 1,"Tank Shield": 1, "Impairment Bombs": 2,
-            "Fire Bombs": 3, "Fly Bombs": 3}
+            "Speed": 0, "Healing Damage": 0, "Goodbye": 0,
+            "Ice Man": 0,"Tank Shield": 0, "Impairment Bombs": 0,
+            "Fire Bombs": 0, "Fly Bombs": 0}
     },
     "discordbot":{
-        "enable":false,
+        "enable":true,
         "token":"<secret-token-here>",
         "liveChat":true,
-        "liveStatsChannelID":925440043672285205,
-        "logsChannelID":925440079843958834
+        "liveStatsChannelID":991755883539353682,
+        "logsChannelID":992416255057346620
     },
     "afk_remover":{
         "enable":true,
@@ -96,7 +104,7 @@
     "sameCharacterForTeam":false,
     "newResultBoard":true,
     "HostDeviceName":"v1.4",
-    "HostName":"BCS",
+    "HostName":"Join Discord",
     "ShowKickVoteStarterName":true,
     "KickVoteMsgType":"chat",
     "minAgeToChatInHours":78,
